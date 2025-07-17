@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=3 uid="uid://dajg4gl8f2wjk"]
+
+[ext_resource type="Script" path="res://Game/instruction_scene.gd" id="1_sokbi"]
+[ext_resource type="Texture2D" uid="uid://cylxukqyrk7km" path="res://plx-4.png" id="2_3sqeu"]
+[ext_resource type="FontFile" uid="uid://c5ugfyiakbt23" path="res://JungleClean.ttf" id="3_ax8nb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1s0wv"]
+texture = ExtResource("2_3sqeu")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_21fxd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmhle"]
+bg_color = Color(2.11775e-06, 0.56462, 0.56462, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 5
+shadow_offset = Vector2(10, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8175i"]
+bg_color = Color(3.85046e-07, 0.442326, 0.442325, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 5
+shadow_offset = Vector2(10, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iy16n"]
+bg_color = Color(0, 0.666681, 0.666681, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 5
+shadow_offset = Vector2(10, 5)
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sokbi")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 646.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1s0wv")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 108.0
+offset_top = -6.0
+offset_right = 1260.0
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("3_ax8nb")
+theme_override_font_sizes/font_size = 119
+text = "Instructions "
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 203.0
+offset_right = 1570.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("3_ax8nb")
+theme_override_font_sizes/font_size = 27
+text = "1. Move the pirate around and cross the obsticles by using arrows or wasd. 
+2. Cross the obsticles and go to the treasure 
+3. interact with the treasure chest to move on 
+
+
+"
+
+[node name="Return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 396.0
+offset_right = 663.0
+offset_bottom = 468.0
+theme_override_font_sizes/font_size = 31
+theme_override_styles/focus = SubResource("StyleBoxEmpty_21fxd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wmhle")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8175i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iy16n")
+text = "Return "
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]
