@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://cwlmcci25tn54"]
+
+[ext_resource type="Texture2D" uid="uid://c8u0bnykti8l" path="res://Chests.png" id="1_e6yi1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqgld"]
+atlas = ExtResource("1_e6yi1")
+region = Rect2(0, 128, 47, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2x1x"]
+atlas = ExtResource("1_e6yi1")
+region = Rect2(47, 128, 47, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtgp5"]
+atlas = ExtResource("1_e6yi1")
+region = Rect2(94, 128, 47, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2qn8"]
+atlas = ExtResource("1_e6yi1")
+region = Rect2(141, 128, 47, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhwxi"]
+atlas = ExtResource("1_e6yi1")
+region = Rect2(188, 128, 47, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jh55"]
+atlas = ExtResource("1_e6yi1")
+region = Rect2(0, 160, 47, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxtgm"]
+atlas = ExtResource("1_e6yi1")
+region = Rect2(47, 160, 47, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywg8y"]
+atlas = ExtResource("1_e6yi1")
+region = Rect2(94, 160, 47, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41b3e"]
+atlas = ExtResource("1_e6yi1")
+region = Rect2(141, 160, 47, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkf7g"]
+atlas = ExtResource("1_e6yi1")
+region = Rect2(188, 160, 47, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5djor"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqgld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2x1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtgp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2qn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhwxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jh55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxtgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywg8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41b3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkf7g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="treasure chest" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(23.2879, -10.1429)
+scale = Vector2(2.15796, 1.67857)
+sprite_frames = SubResource("SpriteFrames_5djor")
+autoplay = "default"
+frame_progress = 0.124942

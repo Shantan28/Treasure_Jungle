@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://brjpdqytljn03"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fev68"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83ldr"]
+bg_color = Color(2.11775e-06, 0.56462, 0.56462, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 5
+shadow_offset = Vector2(10, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxlgn"]
+bg_color = Color(3.85046e-07, 0.442326, 0.442325, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 5
+shadow_offset = Vector2(10, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x1q8a"]
+bg_color = Color(0, 0.666681, 0.666681, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_size = 5
+shadow_offset = Vector2(10, 5)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.0
+offset_top = -36.0
+offset_right = 108.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fev68")
+theme_override_styles/hover = SubResource("StyleBoxFlat_83ldr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kxlgn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_x1q8a")
+text = "Return "
